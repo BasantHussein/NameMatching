@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, jsonify
 import NameMatching_f
 
@@ -11,7 +13,9 @@ def index():
 
 @app.route('/search/<target>', methods=["GET"])
 def search(target):
-    return NameMatching_f.NameMatching(target)
+    json_strings = [json.dumps(json_obj, ensure_ascii=False) for json_obj in NameMatching_f.NameMatching(target).keys()]
+
+    return str(json_strings)
 
 
 if __name__ == '__main__':
