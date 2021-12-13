@@ -1,6 +1,6 @@
 # NameMatching
 
-This project finds the similarity and matching between the arabic names even if the name in english based on google translate API, this project is based on 4 different method of similarity 
+Find the similarity and matching between the Arabic names even if the name is in English and deploy it using API, this project is based on 4 different methods of similarity:
 1. min edit distance
 2. keyboard similarity
 3. phonetics similarity
